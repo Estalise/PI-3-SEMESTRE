@@ -28,7 +28,7 @@ Permitir o cadastro, edição, exclusão e listagem de pessoas físicas, jurídi
 
 O diagrama de classes representa a estrutura lógica do sistema, suas entidades e heranças entre as classes.
 
-![Diagrama de Classes](imagens/diagrama-classes.png)
+![Diagrama de Classes](DIAGRAMA DE CLASSE.png)
 
 ---
 
