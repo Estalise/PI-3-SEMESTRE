@@ -20,7 +20,7 @@ Permitir o cadastro, edição, exclusão e listagem de pessoas físicas, jurídi
 
 **Descrição:** O diagrama abaixo representa o relacionamento entre o ator *Administrador* e os casos de uso principais do sistema.
 
-![Diagrama de Caso de Uso](imagens/diagrama-classes.png)
+![Diagrama de Caso de Uso](imagens/DIAGRAMA DE CASO DE USO.png)
 
 ---
 
