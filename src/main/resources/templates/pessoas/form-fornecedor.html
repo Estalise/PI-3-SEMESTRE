@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Fornecedor</title>
+</head>
+<body>
+<h1>Cadastrar Fornecedor</h1>
+
+<form th:action="@{/pessoas/salvar}" th:object="${pessoa}" method="post">
+    <input type="hidden" th:field="*{id}" />
+
+    <div>
+        <label>Razão Social:</label>
+        <input type="text" th:field="*{razaoSocial}" required />
+    </div>
+    <div>
+        <label>CNPJ:</label>
+        <input type="text" th:field="*{cnpj}" required />
+    </div>
+    <div>
+        <label>Endereço:</label>
+        <input type="text" th:field="*{endereco}" />
+    </div>
+    <div>
+        <label>Telefone:</label>
+        <input type="text" th:field="*{telefone}" />
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="email" th:field="*{email}" />
+    </div>
+    <div>
+        <label>Tipo de Produto:</label>
+        <input type="text" th:field="*{tipoProduto}" required />
+    </div>
+    <div>
+        <label>Contato Comercial:</label>
+        <input type="text" th:field="*{contatoComercial}" />
+    </div>
+
+    <div>
+        <button type="submit">Salvar</button>
+        <a th:href="@{/pessoas}">Cancelar</a>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Cadastros - Menu</title>
+</head>
+<body>
+<h1>Sistema de Gestão de Cadastros</h1>
+<p><a th:href="@{/pessoas}">Listar cadastros</a></p>
+<h3>Novo cadastro</h3>
+<ul>
+  <li><a th:href="@{/pessoas/novo/fisica}">Cadastrar Pessoa Física</a></li>
+  <li><a th:href="@{/pessoas/novo/juridica}">Cadastrar Pessoa Jurídica</a></li>
+  <li><a th:href="@{/pessoas/novo/aluno}">Cadastrar Aluno</a></li>
+  <li><a th:href="@{/pessoas/novo/professor}">Cadastrar Professor</a></li>
+  <li><a th:href="@{/pessoas/novo/fornecedor}">Cadastrar Fornecedor</a></li>
+</ul>
+</body>
+</html>
