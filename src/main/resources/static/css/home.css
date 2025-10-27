@@ -1,0 +1,147 @@
+/* management-style.css - Tema Preto para Sistema de Gestão */
+
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #f0f0f0;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* Cabeçalho */
+.header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #fff, #aaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ccc;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+/* Seção de Novo Cadastro */
+.cadastro-section {
+    background-color: #111;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #222;
+    max-width: 600px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.cadastro-links {
+    list-style: none;
+}
+
+.cadastro-item {
+    margin-bottom: 15px;
+}
+
+.cadastro-link {
+    display: block;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #333, #000);
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.cadastro-link:hover {
+    background: linear-gradient(135deg, #444, #111);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: #666;
+    color: #fff;
+}
+
+/* Efeito de brilho nos links ao passar o mouse */
+.cadastro-link:hover {
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+    to {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .cadastro-section {
+        padding: 20px;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .cadastro-link {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}

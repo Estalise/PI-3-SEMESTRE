@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastrar Professor</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/fundo.css}">
 </head>
 <body>
+<div class="background-container"></div>
 <h1>Cadastrar Professor</h1>
 
-<form th:action="@{/pessoas/salvar}" th:object="${pessoa}" method="post">
+<form th:action="@{/pessoas/salvar/professor}" th:object="${pessoa}" method="post">
+
     <input type="hidden" th:field="*{id}" />
 
     <div>
@@ -44,5 +48,18 @@
         <a th:href="@{/pessoas}">Cancelar</a>
     </div>
 </form>
+<!-- Seção de Cadastros Recentes -->
+<section class="recent-section">
+    <h2>Cadastros Recentes</h2>
+    <div class="recent-container" id="recent-container">
+        <!-- Cards serão inseridos dinamicamente pelo JavaScript -->
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2025 - Sistema de Gestão de Alunos. Todos os direitos reservados.</p>
+</footer>
+
+<script src="/js/recentes.js"></script>
 </body>
 </html>
