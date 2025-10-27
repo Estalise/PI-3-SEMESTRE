@@ -36,27 +36,27 @@ O diagrama de classes representa a estrutura lógica do sistema, suas entidades 
 
 **Tela Inicial**
 
-<img width="1414" height="2000" alt="Image" src="https://github.com/user-attachments/assets/edfe1af7-63e9-4ad3-8921-ad260d82006e" />
+<img width="1414" height="2000" alt="Image" src="https://github.com/user-attachments/assets/472c6c50-0283-4a75-82dd-cce52a28c6a3" />
 
 **Tela de Cadastro de Pessoa Física**
 
-<img width="1414" height="2000" alt="Image" src="https://github.com/user-attachments/assets/cd82d403-ace9-4471-9ab3-68f56b1a1cb0" />
+<img width="1414" height="2000" alt="Image" src="https://github.com/user-attachments/assets/5a4dbcc9-f772-4fd8-9eb1-08e4b90ed7c7" />
 
 **Tela de Cadastro de Pessoa Jurídica**
 
-<img width="1414" height="2000" alt="Image" src="https://github.com/user-attachments/assets/78499a80-fe2c-46a1-9bce-637ff1ff89c0" />
+<img width="1414" height="2000" alt="Image" src="https://github.com/user-attachments/assets/c0714830-6399-4ac9-a756-fa228fd48c09" />
 
 **Tela de Cadastro de Aluno**
 
-<img width="1414" height="2000" alt="Image" src="https://github.com/user-attachments/assets/3e2fce7f-cebd-4f46-abc0-90ae7419e1e0" />
+<img width="1414" height="2000" alt="Image" src="https://github.com/user-attachments/assets/2cf5e755-f4f1-4f4f-907c-cf218e15af4a" />
 
 **Tela de Cadastro de Professor**
 
-<img width="1414" height="2000" alt="Image" src="https://github.com/user-attachments/assets/a86db67f-05ee-4661-838d-054b56d15dbe" />
+<img width="1414" height="2000" alt="Image" src="https://github.com/user-attachments/assets/c7479546-a5cd-49f8-868a-5e68a2544b47" />
 
 **Tela de Cadastro de Fornecedor**
 
-<img width="1414" height="2000" alt="Image" src="https://github.com/user-attachments/assets/62782858-e188-4736-8acb-f6de9692dd63" />
+<img width="1414" height="2000" alt="Image" src="https://github.com/user-attachments/assets/70e5329a-3f68-430c-b14d-c5a0e5b7ac6a" />
 
 ---
 
