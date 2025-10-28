@@ -61,7 +61,7 @@ O diagrama de classes representa a estrutura lógica do sistema, suas entidades 
 ---
 
 ## ⚙️ Tecnologias Utilizadas
-- Linguagem: Java / HTML / CSS (ajuste conforme o projeto real)
+- Linguagem: Java / HTML / CSS / JAVASCRIPT
 - Banco de Dados: MySQL
 - Ferramenta de Versionamento: Git e GitHub
 - Modelagem: UML (Draw.io / Lucidchart)
