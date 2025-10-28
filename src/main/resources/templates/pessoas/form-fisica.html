@@ -2,40 +2,59 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Pessoa Física</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
-    <link rel="stylesheet" th:href="@{/css/fundo.css}">
 </head>
 <body>
+<!-- Added navbar with navigation links -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <span class="navbar-brand">PI Senac - 3º semestre 2025</span>
+        <div class="navbar-links">
+            <a th:href="@{/pessoas/novo/aluno}" class="nav-link">Cadastro de Aluno</a>
+            <a th:href="@{/pessoas/novo/professor}" class="nav-link">Cadastro de Professor</a>
+            <a th:href="@{/pessoas/novo/fornecedor}" class="nav-link">Cadastro de Fornecedor</a>
+            <a th:href="@{/pessoas/novo/juridica}" class="nav-link">Cadastro de Pessoas Jurídica</a>
+            <a th:href="@{/pessoas/novo/fisica}" class="nav-link active">Cadastro de Pessoa Física</a>
+        </div>
+    </div>
+</nav>
+
 <div class="background-container"></div>
-<h1>Cadastrar Pessoa Física</h1>
-<form th:action="@{/pessoas/salvar/fisica}" th:object="${pessoa}" method="post">
-    <input type="hidden" th:field="*{id}" />
-    <div>
-        <label>Nome:</label>
-        <input type="text" th:field="*{nome}" required />
-    </div>
-    <div>
-        <label>CPF:</label>
-        <input type="text" th:field="*{cpf}" required />
-    </div>
-    <div>
-        <label>Endereço:</label>
-        <input type="text" th:field="*{endereco}" />
-    </div>
-    <div>
-        <label>Telefone:</label>
-        <input type="text" th:field="*{telefone}" />
-    </div>
-    <div>
-        <label>Email:</label>
-        <input type="email" th:field="*{email}" />
-    </div>
-    <div>
-        <button type="submit">Salvar</button>
-        <a th:href="@{/pessoas}">Cancelar</a>
-    </div>
-</form>
+
+<!-- Wrapped form in form-wrapper container for consistent styling -->
+<div class="form-wrapper">
+    <h1>Cadastrar Pessoa Física</h1>
+    <form th:action="@{/pessoas/salvar/fisica}" th:object="${pessoa}" method="post" class="form-container">
+        <input type="hidden" th:field="*{id}" />
+        <div class="form-group">
+            <label>Nome:</label>
+            <input type="text" th:field="*{nome}" required />
+        </div>
+        <div class="form-group">
+            <label>CPF:</label>
+            <input type="text" th:field="*{cpf}" required />
+        </div>
+        <div class="form-group">
+            <label>Endereço:</label>
+            <input type="text" th:field="*{endereco}" />
+        </div>
+        <div class="form-group">
+            <label>Telefone:</label>
+            <input type="text" th:field="*{telefone}" />
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" th:field="*{email}" />
+        </div>
+        <div class="form-buttons">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a th:href="@{/pessoas}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
+
 <!-- Seção de Cadastros Recentes -->
 <section class="recent-section">
     <h2>Cadastros Recentes</h2>

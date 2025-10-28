@@ -2,21 +2,114 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Sistema de Cadastros - Menu</title>
-  <link rel="stylesheet" th:href="@{/css/home.css}">
-  <link rel="stylesheet" th:href="@{/css/fundo.css}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Cadastros - Home</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<div class="background-container"></div>
-<h1>Sistema de Gestão de Cadastros</h1>
-<p><a th:href="@{/pessoas}">Listar cadastros</a></p>
-<h3>Novo cadastro</h3>
-<ul>
-  <li><a th:href="@{/pessoas/novo/fisica}">Cadastrar Pessoa Física</a></li>
-  <li><a th:href="@{/pessoas/novo/juridica}">Cadastrar Pessoa Jurídica</a></li>
-  <li><a th:href="@{/pessoas/novo/aluno}">Cadastrar Aluno</a></li>
-  <li><a th:href="@{/pessoas/novo/professor}">Cadastrar Professor</a></li>
-  <li><a th:href="@{/pessoas/novo/fornecedor}">Cadastrar Fornecedor</a></li>
-</ul>
+<!-- Added navbar from other pages -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">PI Senac - 3º semestre 2025</div>
+    <div class="navbar-links">
+      <a th:href="@{/pessoas/novo/fisica}">Cadastro de Pessoa Física</a>
+      <a th:href="@{/pessoas/novo/juridica}">Cadastro de Pessoa Jurídica</a>
+      <a th:href="@{/pessoas/novo/aluno}">Cadastro de Aluno</a>
+      <a th:href="@{/pessoas/novo/professor}">Cadastro de Professor</a>
+      <a th:href="@{/pessoas/novo/fornecedor}" class="navbar-active">Cadastro de Fornecedor</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Added sidebar layout -->
+<div class="home-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h1>Sistema de Gestão de Cadastros</h1>
+    </div>
+
+    <div class="sidebar-section">
+      <p class="sidebar-link-title"><a th:href="@{/pessoas}">Listar cadastros</a></p>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>Novo cadastro</h3>
+      <ul class="sidebar-menu">
+        <li><a th:href="@{/pessoas/novo/fisica}">Cadastrar Pessoa Física</a></li>
+        <li><a th:href="@{/pessoas/novo/juridica}">Cadastrar Pessoa Jurídica</a></li>
+        <li><a th:href="@{/pessoas/novo/aluno}">Cadastrar Aluno</a></li>
+        <li><a th:href="@{/pessoas/novo/professor}">Cadastrar Professor</a></li>
+        <li><a th:href="@{/pessoas/novo/fornecedor}">Cadastrar Fornecedor</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="background-container"></div>
+
+    <section class="hero-section">
+      <h2>Home - PI Senac</h2>
+      <h3>Bem-vindo(a) ao Sistema de Gestão de Cadastros</h3>
+      <p>Este sistema foi desenvolvido para facilitar o gerenciamento de cadastros de pessoas físicas, alunos, professores e fornecedores. Aqui você pode visualizar os cadastros mais recentes e gerenciar informações com praticidade.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Central de Comandos</h2>
+
+      <div class="recent-section">
+        <h3>Cadastros Recentes</h3>
+        <div class="cards-grid">
+          <div class="card">
+            <p class="card-date">Cadastrado 21/10/2025</p>
+            <div class="card-user">
+              <img src="/placeholder.svg?height=40&width=40" alt="Gabriel">
+              <div>
+                <p class="card-name">Gabriel</p>
+                <p class="card-description">Descrição</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <p class="card-date">Cadastrado 18/06/2025</p>
+            <div class="card-user">
+              <img src="/placeholder.svg?height=40&width=40" alt="Gustavo">
+              <div>
+                <p class="card-name">Gustavo</p>
+                <p class="card-description">Descrição</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <p class="card-date">Cadastrado 01/05/2025</p>
+            <div class="card-user">
+              <img src="/placeholder.svg?height=40&width=40" alt="Estalise">
+              <div>
+                <p class="card-name">Estalise</p>
+                <p class="card-description">Descrição</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="manage-section">
+        <h3>Gerenciar Cadastro</h3>
+        <div class="manage-controls">
+          <input type="text" placeholder="Digite o nome..." class="search-input">
+          <button class="btn btn-secondary">Submit</button>
+          <button class="btn btn-primary">Editar</button>
+          <button class="btn btn-danger">Excluir</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>Sobre o Sistema</h2>
+      <p>Este sistema foi desenvolvido como parte do Projeto Integrador do curso de Análise e Desenvolvimento de Sistemas – Senac. Seu objetivo é demonstrar a aplicação prática dos conceitos de programação orientada a objetos, banco de dados e interface de usuário.</p>
+    </section>
+  </main>
+</div>
 </body>
 </html>
