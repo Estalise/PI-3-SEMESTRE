@@ -2,11 +2,28 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listagem de Pessoas</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="stylesheet" th:href="@{/css/list.css}">
 </head>
 <body>
+<nav class="navbar">
+    <div class="navbar-container">
+        <span class="navbar-brand">PI Senac - 3º semestre 2025</span>
+        <div class="navbar-links">
+            <a th:href="@{/pessoas/novo/fisica}" class="nav-link">Cadastro de Pessoa Física</a>
+            <a th:href="@{/pessoas/novo/professor}" class="nav-link">Cadastro de Professor</a>
+            <a th:href="@{/pessoas/novo/fornecedor}" class="nav-link">Cadastro de Fornecedor</a>
+            <a th:href="@{/pessoas/novo/juridica}" class="nav-link">Cadastro de Pessoas Jurídica</a>
+            <a th:href="@{/pessoas/novo/aluno}" class="nav-link">Cadastro de Aluno</a>
+            <a th:href="@{/pessoas}" class="nav-link active">Listagem de Cadastros</a>
+        </div>
+    </div>
+</nav>
+
 <div class="background-container"></div>
+
 <h1>Cadastros</h1>
 <p><a th:href="@{/pessoas/novo}">Menu</a></p>
 
