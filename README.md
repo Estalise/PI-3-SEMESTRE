@@ -6,7 +6,8 @@ O sistema tem como objetivo facilitar o gerenciamento de cadastros de pessoas fÃ
 ---
 
 ## ğŸ‘¥ Integrantes do Grupo
-- Gabriel Estalise    
+- Gabriel Estalise
+- Alexandre Braz Bessa    
 - [adicione os demais nomes aqui]
 
 ---
