@@ -9,7 +9,7 @@ O sistema tem como objetivo facilitar o gerenciamento de cadastros de pessoas f√
 - Gabriel Estalise
 - Alexandre Braz Bessa
 - Mateus Magalh√£es   
-- [adicione os demais nomes aqui]
+- Hugo Dias Santos
 
 ---
 
