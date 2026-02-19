@@ -2,11 +2,30 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listagem de Pessoas</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/list.css}">
 </head>
 <body>
+<nav class="navbar">
+    <div class="navbar-container">
+        <span class="navbar-brand">PI Senac - 3º semestre 2025</span>
+        <div class="navbar-links">
+            <a th:href="@{/pessoas/novo/fisica}" class="nav-link">Cadastro de Pessoa Física</a>
+            <a th:href="@{/pessoas/novo/professor}" class="nav-link">Cadastro de Professor</a>
+            <a th:href="@{/pessoas/novo/fornecedor}" class="nav-link">Cadastro de Fornecedor</a>
+            <a th:href="@{/pessoas/novo/juridica}" class="nav-link">Cadastro de Pessoas Jurídica</a>
+            <a th:href="@{/pessoas/novo/aluno}" class="nav-link">Cadastro de Aluno</a>
+            <a th:href="@{/pessoas}" class="nav-link active">Listagem de Cadastros</a>
+        </div>
+    </div>
+</nav>
+
+<div class="background-container"></div>
+
 <h1>Cadastros</h1>
-<p><a th:href="@{/}">Menu</a> | <a th:href="@{/pessoas/novo}">Novo</a></p>
+<p><a th:href="@{/pessoas/novo}">Menu</a></p>
 
 <table border="1">
     <thead>
@@ -18,9 +37,9 @@
     <tr th:each="p : ${pessoas}">
         <td th:text="${p.id}">1</td>
         <td th:text="${p.nome}">Nome</td>
-        <td th:text="${p.cpf} + ${p.cnpj}">cpf/cnpj</td>
+        <td th:text="${p.cpf != null ? p.cpf : (p.cnpj != null ? p.cnpj : '-')}">Documento</td>
         <td th:text="${p.email}">email</td>
-        <td th:text="${p.class.simpleName}">Tipo</td>
+        <td th:text="${p.tipo}">Tipo</td>
         <td>
             <a th:href="@{'/pessoas/editar/' + ${p.id}}">Editar</a>
             <a th:href="@{'/pessoas/excluir/' + ${p.id}}"

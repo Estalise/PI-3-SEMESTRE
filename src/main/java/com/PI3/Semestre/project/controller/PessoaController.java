@@ -27,6 +27,7 @@ public class PessoaController {
         return "pessoas/index";
     }
 
+    // ========== FORMULÁRIOS ==========
     @GetMapping("/novo/fisica")
     public String novoFisica(Model model) {
         model.addAttribute("pessoa", new PessoaFisica());
@@ -57,12 +58,38 @@ public class PessoaController {
         return "pessoas/form-fornecedor";
     }
 
-    @PostMapping("/salvar")
-    public String salvar(@ModelAttribute("pessoa") Pessoa pessoa) {
+    // ========== SALVAR POR TIPO ==========
+    @PostMapping("/salvar/fisica")
+    public String salvarFisica(@ModelAttribute PessoaFisica pessoa) {
         service.salvar(pessoa);
         return "redirect:/pessoas";
     }
 
+    @PostMapping("/salvar/juridica")
+    public String salvarJuridica(@ModelAttribute PessoaJuridica pessoa) {
+        service.salvar(pessoa);
+        return "redirect:/pessoas";
+    }
+
+    @PostMapping("/salvar/aluno")
+    public String salvarAluno(@ModelAttribute Aluno pessoa) {
+        service.salvar(pessoa);
+        return "redirect:/pessoas";
+    }
+
+    @PostMapping("/salvar/professor")
+    public String salvarProfessor(@ModelAttribute Professor pessoa) {
+        service.salvar(pessoa);
+        return "redirect:/pessoas";
+    }
+
+    @PostMapping("/salvar/fornecedor")
+    public String salvarFornecedor(@ModelAttribute Fornecedor pessoa) {
+        service.salvar(pessoa);
+        return "redirect:/pessoas";
+    }
+
+    // ========== EXCLUIR / EDITAR ==========
     @GetMapping("/excluir/{id}")
     public String excluir(@PathVariable Long id) {
         service.excluir(id);
